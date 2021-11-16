@@ -82,7 +82,7 @@ int main() {
     cout << endl;
     cout << endl;
 
-    Vector.erase(Vector.begin(), Vector.begin()+4);
+    Vector.erase(Vector.begin() + 1, Vector.begin() + 5);
 
     cout << "Vector after delete ellements bggin 1 to 4:" << endl;
 
