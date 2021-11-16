@@ -61,9 +61,9 @@ int main() {
     delta = first - last;
 
 
-    for (int i = 0; i < Vector.size(); i++)
+    for (auto& i: Vector)
     {
-        Vector[i] /= delta;
+        i /= delta;
     }
 
     cout << "Vector after del on delta:" << endl;
