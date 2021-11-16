@@ -10,9 +10,9 @@ int main() {
 
     cout << "First task:" << endl;
 
-    array<double, 10> m = {2, 2, 2, 2, 2, 2, 2, 2, 2, 2};
+    array<int, 10> m = {2, 2, 2, 2, 2, 2, 2, 2, 2, 2};
     cout << "First mass:" << endl;
-    for (double a: m)
+    for (int a: m)
         cout << a << " ";
     cout << endl;
     cout << endl;
@@ -20,19 +20,19 @@ int main() {
     for (int i = 0; i < 10; i++) { m[i] = static_cast<int>(rd() % 21 - 10); }
 
     cout << "Random mass:" << endl;
-    for (double a: m)
+    for (int a: m)
         cout << a << " ";
     cout << endl;
     cout << endl;
 
     cout << "Second task" << endl;
-    vector<float> Vector;
+    vector<int> Vector;
     for (int i = 0; i < 10; i++) {
         Vector.push_back(m[i]);
     }
     cout << "Vector:" << endl;
 
-    for (double a: Vector)
+    for (int a: Vector)
         cout << a << " ";
     cout << endl;
     cout << endl;
@@ -44,20 +44,20 @@ int main() {
 
     cout << "Vector after delete null ellement:" << endl;
 
-    for (double a: Vector)
+    for (int a: Vector)
         cout << a << " ";
     cout << endl;
     cout << endl;
 
     int sum;
     sum = 0;
-    for (double a: Vector)
+    for (int a: Vector)
         sum += a;
     cout << "Sum of vector is: " << sum << endl;
 
     int first, last, delta;
     first = *Vector.begin();
-    last = *Vector.end();
+    last = *Vector.end() - 1;
     delta = first - last;
 
 
@@ -68,7 +68,7 @@ int main() {
 
     cout << "Vector after del on delta:" << endl;
 
-    for (double a: Vector)
+    for (int a: Vector)
         cout << a << " ";
     cout << endl;
     cout << endl;
@@ -77,7 +77,7 @@ int main() {
 
     cout << "Vector after adding 2 in end:" << endl;
 
-    for (double a: Vector)
+    for (int a: Vector)
         cout << a << " ";
     cout << endl;
     cout << endl;
@@ -86,7 +86,7 @@ int main() {
 
     cout << "Vector after delete ellements bggin 1 to 4:" << endl;
 
-    for (double a: Vector)
+    for (int a: Vector)
         cout << a << " ";
     cout << endl;
     cout << endl;
@@ -95,7 +95,7 @@ int main() {
 
     Vector.insert(Vector.begin() + Vector.size() - 1, {2.5,2.5,2.5});
 
-    for (double a: Vector)
+    for (int a: Vector)
         cout << a << " ";
     cout << endl;
     cout << endl;
