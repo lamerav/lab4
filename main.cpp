@@ -2,6 +2,7 @@
 #include <random>
 #include <array>
 #include <vector>
+#include <string>
 
 using namespace std;
 
@@ -10,9 +11,9 @@ int main() {
 
     cout << "First task:" << endl;
 
-    array<int, 10> m = {2, 2, 2, 2, 2, 2, 2, 2, 2, 2};
+    array<float, 10> m = {2, 2, 2, 2, 2, 2, 2, 2, 2, 2};
     cout << "First mass:" << endl;
-    for (int a: m)
+    for (float a: m)
         cout << a << " ";
     cout << endl;
     cout << endl;
@@ -20,19 +21,19 @@ int main() {
     for (int i = 0; i < 10; i++) { m[i] = static_cast<int>(rd() % 21 - 10); }
 
     cout << "Random mass:" << endl;
-    for (int a: m)
+    for (float a: m)
         cout << a << " ";
     cout << endl;
     cout << endl;
 
     cout << "Second task" << endl;
-    vector<int> Vector;
+    vector<float> Vector;
     for (int i = 0; i < 10; i++) {
         Vector.push_back(m[i]);
     }
     cout << "Vector:" << endl;
 
-    for (int a: Vector)
+    for (float a: Vector)
         cout << a << " ";
     cout << endl;
     cout << endl;
@@ -44,18 +45,18 @@ int main() {
 
     cout << "Vector after delete null ellement:" << endl;
 
-    for (int a: Vector)
+    for (float a: Vector)
         cout << a << " ";
     cout << endl;
     cout << endl;
 
     int sum;
     sum = 0;
-    for (int a: Vector)
+    for (float a: Vector)
         sum += a;
     cout << "Sum of vector is: " << sum << endl;
 
-    int first, last, delta;
+    float first, last, delta;
     first = *Vector.begin();
     last = *Vector.end() - 1;
     delta = first - last;
@@ -68,7 +69,7 @@ int main() {
 
     cout << "Vector after del on delta:" << endl;
 
-    for (int a: Vector)
+    for (float a: Vector)
         cout << a << " ";
     cout << endl;
     cout << endl;
@@ -77,7 +78,7 @@ int main() {
 
     cout << "Vector after adding 2 in end:" << endl;
 
-    for (int a: Vector)
+    for (float a: Vector)
         cout << a << " ";
     cout << endl;
     cout << endl;
@@ -86,7 +87,7 @@ int main() {
 
     cout << "Vector after delete ellements bggin 1 to 4:" << endl;
 
-    for (int a: Vector)
+    for (float a: Vector)
         cout << a << " ";
     cout << endl;
     cout << endl;
@@ -95,7 +96,7 @@ int main() {
 
     Vector.insert(Vector.begin() + Vector.size() - 1, {2.5,2.5,2.5});
 
-    for (int a: Vector)
+    for (float a: Vector)
         cout << a << " ";
     cout << endl;
     cout << endl;
@@ -149,7 +150,7 @@ int main() {
 
 
     string s1;
-    s1 = "Can you can a can as a canner can can a can ";
+    s1 = "Can you can a can as a canner can can a can?";
     cout << "Original phrase: " << s1 << endl;
     cout << "Enter phrase you want to insert: ";
     string word;
@@ -160,6 +161,7 @@ int main() {
     {
         s1.replace(s1.find("can "), 3, word);
     }
+    s1.replace(s1.find("Can"), 3, word);
+    s1.replace(s1.find("can?"), 3, word);
     cout << "The new string is: " << s1;
-
 }
